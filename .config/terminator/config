@@ -1,0 +1,46 @@
+[global_config]
+  borderless = True
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  title_use_system_font = False
+  title_font = MesloLGS NF 9
+[keybindings]
+[profiles]
+  [[default]]
+    visible_bell = True
+    icon_bell = False
+    background_darkness = 0.72
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = MesloLGS NF 14
+    show_titlebar = False
+    scrollbar_position = hidden
+    use_system_font = False
+  [[Arthur]]
+    visible_bell = True
+    icon_bell = False
+    background_color = "#1c1c1c"
+    cursor_color = "#e2bbef"
+    font = MesloLGS NF 14
+    foreground_color = "#ddeedd"
+    show_titlebar = False
+    palette = "#3d352a:#cd5c5c:#86af80:#e8ae5b:#6495ed:#deb887:#b0c4de:#bbaa99:#554444:#cc5533:#88aa22:#ffa75d:#87ceeb:#996600:#b0c4de:#ddccbb"
+    use_system_font = False
+  [[Chalk]]
+    visible_bell = True
+    icon_bell = False
+    background_color = "#2b2d2e"
+    cursor_color = "#708284"
+    font = MesloLGS NF 14
+    foreground_color = "#d2d8d9"
+    show_titlebar = False
+    palette = "#7d8b8f:#b23a52:#789b6a:#b9ac4a:#2a7fac:#bd4f5a:#44a799:#d2d8d9:#888888:#f24840:#80c470:#ffeb62:#4196ff:#fc5275:#53cdbd:#d2d8d9"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
