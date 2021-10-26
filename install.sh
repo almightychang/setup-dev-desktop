@@ -23,7 +23,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 cp -r .config/nvim/ ~/.config/nvim
 
 echo "Installing pyenv..."
-git clone https://github.com/pyenv/pyenv.git
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
 echo "Installing oh-my-zsh"
 echo "Add plugin into zshrc plugin"
