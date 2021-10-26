@@ -49,7 +49,7 @@ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init --path)"' >> ~/.zshrc
 
 echo 'alias activate="source .venv/bin/activate"' >> ~/.zshrc
-echo "alias pyclean='find . -name "*.py[co]" -o -name __pycache__ -exec rm -rf {} +'" >> ~/.zshrc
+echo "alias pyclean='find . -name \"*.py[co]\" -o -name __pycache__ -exec rm -rf {} +'" >> ~/.zshrc
 
 source ~/.zshrc
 exit
