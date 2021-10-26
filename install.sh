@@ -4,10 +4,10 @@ sudo apt update
 sudo apt upgrade -y
 
 echo "Installing packages"
-sudo apt-get install git zsh neovim curl terminator -y
+sudo apt-get install git zsh neovim curl terminator net-tools -y
 
 echo "Installing gcc arm toolchain"
-curl -fsSL https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2
+wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2
 sudo tar xjf gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2 -C /usr/share
 sudo ln -s /usr/share/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/bin/arm-none-eabi-gcc /usr/bin/arm-none-eabi-gcc 
 sudo ln -s /usr/share/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/bin/arm-none-eabi-g++ /usr/bin/arm-none-eabi-g++ 
