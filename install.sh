@@ -24,6 +24,11 @@ echo "vim-plug for neovim"
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 cp -r .config/nvim/ ~/.config/nvim
 
+echo "terminator theme"
+pip install requests
+mkdir -p $HOME/.config/terminator/plugins
+wget https://git.io/v5Zww -O $HOME"/.config/terminator/plugins/terminator-themes.py"
+
 echo "Installing pyenv..."
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
@@ -32,14 +37,11 @@ echo "Add plugin into zshrc plugin"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+exit
 
 echo "Installing Powerlevel10k & Terminal"
 cp -r .fonts/ ~/.fonts/
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-pip install requests
-mkdir -p $HOME/.config/terminator/plugins
-wget https://git.io/v5Zww -O $HOME"/.config/terminator/plugins/terminator-themes.py"
 
 cp .p10k.zsh ~/.p10k.zsh
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
