@@ -1,0 +1,5 @@
+{
+    "python.venvPath": ".env",
+	"python.linting.pylintEnabled": true,
+    "python.formatting.provider": "yapf"
+}
