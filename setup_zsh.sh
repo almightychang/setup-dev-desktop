@@ -3,6 +3,7 @@
 # Run after install.sh is done. Open new terminal and run the script.
 # Change ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc
 # Change the terminal font to Meslo NF
+# Enable option at Terminator(Right Click)-Preference-Plugins-TerminatorThemes
 # Close and Open terminal to set powerlevel10k theme
 # open nvim and type :PlugInstall to set nvim
 
