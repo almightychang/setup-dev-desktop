@@ -18,6 +18,7 @@ sudo ln -s /usr/share/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/bin/arm-none-e
 sudo apt install libncurses-dev -y
 sudo ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/x86_64-linux-gnu/libncurses.so.5
 sudo ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/x86_64-linux-gnu/libtinfo.so.5
+rm *.tar.bz2
 
 echo "vim-plug for neovim"
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
