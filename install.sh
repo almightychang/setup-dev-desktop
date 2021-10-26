@@ -7,7 +7,7 @@ echo "Installing fonts"
 cp -r .fonts/ ~/.fonts/
 
 echo "Installing packages"
-sudo apt-get install git zsh neovim curl terminator net-tools python3-pip -y
+sudo apt-get install git zsh neovim curl terminator net-tools python3-pip npm -y
 chsh -s /bin/zsh
 
 echo "Installing gcc arm toolchain"
