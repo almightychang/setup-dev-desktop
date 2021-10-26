@@ -1,10 +1,10 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 
 echo "Installing packages"
-sudo apt-get install git neovim curl terminator
+sudo apt-get install git neovim curl terminator -y
 
 echo "Installing gcc arm toolchain"
 curl -fsSL https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2
@@ -14,7 +14,7 @@ sudo ln -s /usr/share/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/bin/arm-none-e
 sudo ln -s /usr/share/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/bin/arm-none-eabi-gdb /usr/bin/arm-none-eabi-gdb 
 sudo ln -s /usr/share/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/bin/arm-none-eabi-size /usr/bin/arm-none-eabi-size 
 sudo ln -s /usr/share/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/bin/arm-none-eabi-objcopy /usr/bin/arm-none-eabi-objcopy
-sudo apt install libncurses-dev
+sudo apt install libncurses-dev -y
 sudo ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/x86_64-linux-gnu/libncurses.so.5
 sudo ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/x86_64-linux-gnu/libtinfo.so.5
 
