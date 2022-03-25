@@ -7,7 +7,7 @@ echo "Installing fonts"
 cp -r .fonts/ ~/.fonts/
 
 echo "Installing packages"
-sudo apt-get install git zsh curl terminator net-tools python3-pip npm bear -y
+sudo apt-get install git zsh curl terminator net-tools python3-pip npm bear stlink-tools -y
 sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen -y
 chsh -s /bin/zsh
 
