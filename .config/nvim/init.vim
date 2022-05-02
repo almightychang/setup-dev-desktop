@@ -19,8 +19,8 @@ set clipboard=unnamed
 set autoindent
 set cindent
 set smartindent
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set laststatus=2
 set noshowmode
@@ -28,18 +28,19 @@ set autoread
 
 filetype indent on
 
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2                                                   
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-autocmd FileType css setlocal shiftwidth=2 tabstop=2
-autocmd FileType json setlocal shiftwidth=2 tabstop=2
-autocmd FileType c setlocal shiftwidth=4 tabstop=4
+"autocmd FileType javascript setlocal shiftwidth=2 tabstop=2                                                   
+"autocmd FileType html setlocal shiftwidth=2 tabstop=2
+"autocmd FileType css setlocal shiftwidth=2 tabstop=2
+"autocmd FileType json setlocal shiftwidth=2 tabstop=2
+"autocmd FileType c setlocal shiftwidth=4 tabstop=4
 
 syntax sync minlines=200
 
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
 autocmd FileChangedShellPost *
-        \ echohl WarningMsg | echo 'File changed on disk. Buffer reloaded.' | echohl None
+            \ echohl WarningMsg | echo 'File changed on disk. Buffer reloaded.' | echohl None
 " 
+
 
 "///////////////////////////
 " NERDTree plugin 
@@ -79,22 +80,18 @@ nnoremap <c-n> :call OpenTerminal()<CR>
 " Highlight 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
+    ensure_installed = {
+        "bash", "c", "cmake", "comment", "cpp", "css", "dockerfile", "html",
+        "http", "java", "javascript", "json", "lua", "make", "python", 
+        "typescript", "vim", "yaml"
+    }, 
     highlight = {
-    enable = true,
-    custom_captures = {
-        -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
-        ["foo.bar"] = "Identifier",
+        enable = true,
         },
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-    },
     indent = {
-        enable = true
-    },
-}
+        enable = false
+        },
+    }
 EOF
 " 
 " 
@@ -139,19 +136,19 @@ lua require'colorizer'.setup()
 
 " COC
 let g:coc_global_extensions = ['coc-json',
-      \ 'coc-git',
-      \ 'coc-cssmodules',
-      \ 'coc-css',
-      \ 'coc-eslint',
-      \ 'coc-html',
-      \ 'coc-tsserver',
-      \ 'coc-tslint',
-      \ 'coc-pyright',
-      \ 'coc-stylelint',
-      \ 'coc-yaml',
-      \ 'coc-svg',
-      \ 'coc-prettier',
-      \ 'coc-swagger']
+            \ 'coc-git',
+            \ 'coc-cssmodules',
+            \ 'coc-css',
+            \ 'coc-eslint',
+            \ 'coc-html',
+            \ 'coc-tsserver',
+            \ 'coc-tslint',
+            \ 'coc-pyright',
+            \ 'coc-stylelint',
+            \ 'coc-yaml',
+            \ 'coc-svg',
+            \ 'coc-prettier',
+            \ 'coc-swagger']
 " \ 'coc-clangd',
 " \ 'coc-python',
 
