@@ -19,5 +19,8 @@ echo "Install version manager"
 source ./install_vm.sh
 
 echo "Install utility"
+source ./install_util.sh
+
+source ./install_zsh_plugins.sh
 
 exit

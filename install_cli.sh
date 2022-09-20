@@ -21,7 +21,7 @@ mkdir -p $HOME/.config/terminator/plugins
 wget https://git.io/v5Zww -O $HOME"/.config/terminator/plugins/terminator-themes.py"
 
 echo "Installing oh-my-zsh"
-/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Install ccls"
 sudo apt-get install clang
@@ -32,3 +32,4 @@ cmake -H. -BRelease -DCMAKE_BUILD_TYPE=Release \
     -DLLVM_INCLUDE_DIR=/usr/lib/llvm-14/include \
     -DLLVM_BUILD_INCLUDE_DIR=/usr/include/llvm-14/
 cmake --build Release --target install
+cd ..
