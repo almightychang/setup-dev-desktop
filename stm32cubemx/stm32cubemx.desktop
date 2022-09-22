@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=STM32CubeMX
+Icon=/home/aniai-sexy/STM32CubeMX/stm32cubemx_icon.png
+Type=Application
+Terminal=false
+Exec=stm32cubemx
+X-Desktop-File-Install-Version=0.26
