@@ -14,6 +14,7 @@ source ./install_stm32_dep.sh
 
 echo "Install CLI related"
 source ./install_cli.sh
+source ./install_gh.sh
 
 echo "Install version manager"
 source ./install_vm.sh

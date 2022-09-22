@@ -24,7 +24,7 @@ echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Install ccls"
-sudo apt-get install clang
+sudo apt-get install clang libclang-dev
 git clone --depth=1 --recursive https://github.com/MaskRay/ccls
 cd ccls
 cmake -H. -BRelease -DCMAKE_BUILD_TYPE=Release \
