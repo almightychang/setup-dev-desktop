@@ -24,12 +24,4 @@ echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Install ccls"
-sudo apt-get install clang libclang-dev
-git clone --depth=1 --recursive https://github.com/MaskRay/ccls
-cd ccls
-cmake -H. -BRelease -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_PREFIX_PATH=/usr/lib/llvm-14 \
-    -DLLVM_INCLUDE_DIR=/usr/lib/llvm-14/include \
-    -DLLVM_BUILD_INCLUDE_DIR=/usr/include/llvm-14/
-cmake --build Release --target install
-cd ..
+sudo apt-get install clang libclang-dev ccls -y
